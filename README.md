@@ -1,41 +1,43 @@
-# Documentação IDF0 - ICMO
+# 📋 Sistema de Cadastro
 
-A **documentação IDF0 - ICMO** é uma metodologia de modelagem e documentação de processos utilizada para **descrever, analisar e otimizar fluxos de trabalho** dentro de uma organização.  
-Ela se baseia em uma **linguagem de modelagem hierárquica** que detalha como as atividades se relacionam entre si, garantindo uma compreensão clara e completa de cada processo.
-
----
-
-## O que significa cada sigla?
-
-### IDF0 *(ICOM Definition for Function Model)*
-É a linguagem de modelagem que representa as funções e atividades de um sistema ou processo.  
-O nome **IDF0** é derivado de **ICOM**, que é a base do modelo:
-
-- **I - Inputs (Entradas):** Recursos, informações ou materiais que são consumidos ou transformados pela função.  
-- **C - Controls (Controles):** Normas, regras, políticas ou restrições que guiam ou limitam a execução da função.  
-- **O - Outputs (Saídas):** O resultado final da função, como um produto, serviço ou relatório.  
-- **M - Mechanisms (Mecanismos):** As ferramentas, sistemas ou pessoas que executam a função.  
-
-### ICMO *(Inputs, Controls, Mechanisms, Outputs)*
-É uma extensão detalhada do conceito de **ICOM**, que organiza e descreve cada um desses elementos para uma compreensão mais profunda do processo.
+Este é um projeto em **Java** utilizando **Maven**, desenvolvido na falcudade para gerenciar usuários de forma simples, aplicando conceitos de **camadas de software (Controller, Service e Model)**.
 
 ---
 
-## Como funciona?
-
-A metodologia **IDF0 - ICMO** permite a criação de **diagramas hierárquicos**, onde cada nível de detalhe pode ser aprofundado para descrever sub-processos.  
-Isso é ideal para:
-
-- 🔎 **Análise de Processos:** Identificar gargalos, redundâncias e oportunidades de melhoria.  
-- ✅ **Gerenciamento da Qualidade:** Padronizar a execução de tarefas e garantir conformidade com normas.  
-- ⚙️ **Projetos de Engenharia de Sistemas:** Planejar e projetar sistemas de forma estruturada, garantindo que todos os componentes sejam compreendidos.  
-- 💬 **Comunicação:** Facilitar a comunicação entre equipes e stakeholders, fornecendo uma visão clara do fluxo de trabalho.  
-
+## 🚀 Tecnologias utilizadas
+- **Java 17+**
+- **Maven**
+  
 ---
 
-## Resumo
+## 📂 Estrutura do projeto
+```text
+sistema-de-cadastro/
+ ├── pom.xml
+ ├── src/
+ │   ├── main/
+ │   │   └── java/com/testesoftware/
+ │   │        ├── Main.java                  # Classe principal
+ │   │        ├── controller/
+ │   │        │    └── UsuarioController.java
+ │   │        ├── model/
+ │   │        │    └── Usuario.java
+ │   │        └── service/
+ │   │             └── UsuarioService.java
+ │   └── test/java/com/testesoftware/
+ │        └── AppTest.java
+ └── usuarios/                               # Arquivos JSON de simulação
+```
 
-A documentação **IDF0 - ICMO** é uma **ferramenta poderosa** para qualquer organização que busca **modelar e otimizar seus processos** de forma **precisa e eficiente**.
+## ✅ Funcionalidades
+- 📌 **Cadastro de usuários**: permite criar novos registros de usuários.  
+- 📋 **Listagem de usuários**: exibe os usuários cadastrados.  
+- 🏗 **Arquitetura em camadas**: organização em Controller, Service e Model, seguindo boas práticas.  
+- 🧪 **Testes unitários**: implementação de testes para garantir a qualidade do código.  
+- 📂 **Persistência em arquivos JSON**: simulação de armazenamento de dados no diretório `usuarios/`.
+
+# Diagrama IDEF0
+- Em desenvolvimento 🚧
 
 
 # Diagrama de classe em UML
