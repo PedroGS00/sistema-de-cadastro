@@ -1,20 +1,39 @@
 package com.testesoftware.service;
 
 import java.io.*;
+import java.sql.DriverManager;
+
+import org.apache.commons.codec.net.BCodec;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+
 import com.google.gson.Gson;
 import com.testesoftware.model.Usuario;
-
 public class UsuarioService {
-    private static final Gson gson = new Gson();
 
-    public Usuario cadastrar (String nome, String sobrenome, String email, String senhaHash) {
-    
-        int id = (int) (System.currentTimeMillis() / 100); 
-        Usuario novoUsuario = new Usuario(id,nome, sobrenome, email, senhaHash);
-        salvaUsuario(novoUsuario);
+    private static final String DB_URL = "postgresql://postgres:senac@2025@db.qasoimiiiiguwthmcbgb.supabase.co:5432/postgres";
 
-        System.out.println("Usuário " + nome + " cadastrado com sucesso!");
-        return novoUsuario;
+
+   private java.sql.Connection getConnection() throws java.sql.SQLException {
+        return DriverManager.getConnection(DB_URL);
+    }
+
+    public void cadastrar (String nome, String sobrenome, String email, String senha) {
+        String sql = "INSERT INTO usuarios (nome, sobrenome, email, senha_hash) VALUES (?, ?, ?, ?)";
+        try (java.sql.Connection conn = getConnection();
+             java.sql.PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            String senhaHash = BCrypt.hashpw(senha, BCrypt.gensalt());
+
+            pstmt.setString(1, nome);
+            pstmt.setString(2, sobrenome);
+            pstmt.setString(3, email);
+            pstmt.setString(4, senhaHash);
+            pstmt.executeUpdate();
+
+            System.out.println("Usuário " + nome + " cadastrado com sucesso!");
+             } catch (java.sql.SQLException e) {
+            System.out.println("Erro ao cadastrar o usuário: " + e.getMessage());
+             }   
     }
 
     public void atualizarUsuario(int id , String nome, String sobrenome,String email, String senhaHash) {
@@ -80,7 +99,5 @@ public class UsuarioService {
             return null;
         }
     }
-
-
 
 }
