@@ -22,7 +22,7 @@
     <dependency>
         <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
-        <version>42.5.4</version>
+        <version>42.7.3</version>
     </dependency>
     <dependency>
       <groupId>org.clojure</groupId>
@@ -34,23 +34,26 @@
       <artifactId>android</artifactId>
       <version>4.1.1.4</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <version>2.12.1</version>
     </dependency>
-  
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>tools.nrepl</artifactId>
       <version>0.2.13</version>
     </dependency>
-  
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
       <version>5.1.6.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.9.1</version>
+        <scope>test</scope>
     </dependency>
   </dependencies>
 </project>

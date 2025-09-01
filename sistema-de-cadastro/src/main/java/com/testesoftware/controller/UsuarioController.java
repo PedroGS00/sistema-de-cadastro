@@ -1,7 +1,9 @@
 package com.testesoftware.controller;
 
+import org.springframework.stereotype.Controller;
 import com.testesoftware.service.UsuarioService;
 
+@Controller
 public class UsuarioController {
     private UsuarioService usuarioService;
 
