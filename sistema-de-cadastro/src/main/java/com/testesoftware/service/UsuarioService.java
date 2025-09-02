@@ -6,13 +6,11 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 
 public class UsuarioService {
 
-    private static final String DB_URL = "jdbc:postgresql://db.qasoimiiiiguwthmcbgb.supabase.co:5432/postgres?user=postgres&password=senac@2025";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "senac@2025";
+    private static final String DB_URL = "jdbc:postgresql://aws-1-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.qasoimiiiiguwthmcbgb&password=senac@2025";
     
 
    private java.sql.Connection getConnection() throws java.sql.SQLException {
-        return DriverManager.getConnection(DB_URL, USER, PASSWORD);
+        return DriverManager.getConnection(DB_URL);
     }
 
     public void cadastrar (String nome, String sobrenome, String email, String senha) {
