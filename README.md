@@ -37,7 +37,7 @@ sistema-de-cadastro/
 - 📂 **Persistência em arquivos JSON**: simulação de armazenamento de dados no diretório `usuarios/`.
 
 # Diagrama IDEF0
-- Em desenvolvimento 🚧
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/e52648b0-1d59-4fa2-a5bf-abccd0551ce3" />
 
 
 # Diagrama de classe em UML
