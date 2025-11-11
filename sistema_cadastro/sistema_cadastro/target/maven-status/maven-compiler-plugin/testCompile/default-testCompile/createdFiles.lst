@@ -1,0 +1,5 @@
+com\sistema\cadastro\service\UserServiceTest$UpdateUserTests.class
+com\sistema\cadastro\service\ProductServiceTest.class
+com\sistema\cadastro\service\ProductServiceTest$StockOperations.class
+com\sistema\cadastro\service\CepServiceTest.class
+com\sistema\cadastro\service\UserServiceTest.class
