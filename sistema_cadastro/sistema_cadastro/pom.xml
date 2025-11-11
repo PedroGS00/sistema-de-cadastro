@@ -155,6 +155,14 @@
             <scope>test</scope> 
         </dependency>
 
+        <!-- EasyVCR: gravação e reprodução de interações HTTP em testes -->
+        <dependency>
+            <groupId>com.easypost</groupId>
+            <artifactId>easyvcr</artifactId>
+            <version>0.5.3</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -220,6 +228,27 @@
             
 
             
+            <!-- JaCoCo: relatório de cobertura -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.11</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
